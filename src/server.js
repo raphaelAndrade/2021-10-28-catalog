@@ -1,7 +1,10 @@
 var express = require('express');
 var app = express();
+var cors = require("cors");
 var router = express.Router();
 var PORT = 8081;
+
+app.use(cors());
 
 router.get('/watches', function(req, res) {
   res.json({
